@@ -21,10 +21,10 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: npm install, build, and test
+      - name: npm install, start, and test
         run: |
           npm install
-          npm run build --if-present
+          npm run start --if-present
           npm run test --if-present
 
       - name: Upload artifact for deployment job
@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'servicarla'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E795734B152548AFB73D35F244CCBC37 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1E9377FC58454FA0A4F95BA753D4606C }}
           package: .
